@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/teacherintarot/static/js/main.dc759cd2.js",
+    "static/js/453.fadc4eec.chunk.js": "/teacherintarot/static/js/453.fadc4eec.chunk.js",
+    "index.html": "/teacherintarot/index.html",
+    "static/media/scroll_down.svg": "/teacherintarot/static/media/scroll_down.8adbaf5011336cc2aecd2d9c1dd8f058.svg",
+    "main.dc759cd2.js.map": "/teacherintarot/static/js/main.dc759cd2.js.map",
+    "453.fadc4eec.chunk.js.map": "/teacherintarot/static/js/453.fadc4eec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.dc759cd2.js"
+  ]
+}
