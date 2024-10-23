@@ -31,6 +31,7 @@ const MainWrap = styled.div`
 const SubTitle = styled.p`
     color:var(--basic-yellow);
     margin-top:100px;
+    margin-bottom:19px;
 `
 const MainTitle = styled.h1`
     color:var(--basic-white);
