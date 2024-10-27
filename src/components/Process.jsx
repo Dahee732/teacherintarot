@@ -8,7 +8,6 @@ const Process = (props)=>{
 
     return (
         <>
-        dddd
         </>
 
     )
