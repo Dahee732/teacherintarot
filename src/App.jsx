@@ -28,6 +28,7 @@ const GlobalStyle = createGlobalStyle`
     --basic-yellow:  #FEEB81;
     --basic-orenge: #FE4B1F;
     --secondary-green: #073A2C;
+    --third-green:#92B0A8;
   }
   *{
     margin:0;

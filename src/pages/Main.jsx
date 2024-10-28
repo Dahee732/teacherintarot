@@ -6,23 +6,40 @@ import Submit from "../components/Submit"
 
 const Main = ()=> {
     const [pageNum, setPageNum] = useState(0);
-    const [isAnimating, setIsAnimating] = useState(false);
-    
-
+    const [resultOpen, setResultOpen] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
 
     const handleWheel = (event)=> {
-        if (event.deltaY < 0) {
-            console.log('up')
-            setPageNum(prop => prop !== 0 ? prop - 1 : 0);
+            if (event.deltaY < 0) {
+                console.log('up')
+                setPageNum(prop => prop !== 0 ? prop - 1 : 0);
+
+              } else if (event.deltaY > 0) {
+                console.log('down')
+                setPageNum(prop => prop + 1);
+
+                window.removeEventListener('wheel', handleWheel);
+                window.removeEventListener('touchmove', handleTouchMove);
+              }
 
 
-          } else if (event.deltaY > 0) {
-            console.log('down')
-            setPageNum(prop => prop + 1);
-          }
+      
     }
     const handleTouchMove = (event)=> {
+
+        if (event.deltaY < 0) {
+
+            setPageNum(prop => prop !== 0 ? prop - 1 : 0);
+
+          } else if (event.deltaY > 0) {
+
+            setPageNum(prop => prop + 1);
+
+            window.removeEventListener('wheel', handleWheel);
+            window.removeEventListener('touchmove', handleTouchMove);
+
+          }
 
     }
 
@@ -43,22 +60,22 @@ const Main = ()=> {
     return (
         <MainWrap>
                 
-                <TitleWrap>
+                <TitleWrap isResultOpen = {resultOpen}>
                 <SubTitle>타로카드로 알아보는</SubTitle>
                 <MainTitle>교사 유형 테스트</MainTitle>
                 </TitleWrap>
 
-
-                
-
-                <ScrollIcon style={{opacity : pageNum == 0 ? 1 : 0}} >
+                <ScrollIcon style={{opacity : pageNum === 0 ? 1 : 0}} >
                     <img src={scrollIcon} alt="#" />
                     scroll
                 </ScrollIcon>
 
-                <Submit>
+                <Submit  
+                isActive = {pageNum} 
+                isResultOpen = {resultOpen} 
+                setIsResultOpen = {setResultOpen} 
+                />
 
-                </Submit>
 
         </MainWrap>
     )
@@ -119,6 +136,8 @@ const TitleWrap = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transition:all 0.5s ease;
+    opacity: ${props => props.isResultOpen ? 0 : 1};
     
 `
 
