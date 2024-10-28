@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.js": "/teacherintarot/static/js/main.4b710023.js",
-    "static/js/453.fadc4eec.chunk.js": "/teacherintarot/static/js/453.fadc4eec.chunk.js",
+    "main.css": "/teacherintarot/static/css/main.b1cec025.css",
+    "main.js": "/teacherintarot/static/js/main.bd80ccd9.js",
+    "static/js/453.43b78275.chunk.js": "/teacherintarot/static/js/453.43b78275.chunk.js",
+    "static/media/main_bg.png": "/teacherintarot/static/media/main_bg.7d24b5bb4fa5830dcb61.png",
     "index.html": "/teacherintarot/index.html",
+    "static/media/calendar.svg": "/teacherintarot/static/media/calendar.6df8cc017c8810354de91e62bb4b3804.svg",
     "static/media/scroll_down.svg": "/teacherintarot/static/media/scroll_down.2373667dab44a8b9e4ffd66e469094e5.svg",
-    "main.4b710023.js.map": "/teacherintarot/static/js/main.4b710023.js.map",
-    "453.fadc4eec.chunk.js.map": "/teacherintarot/static/js/453.fadc4eec.chunk.js.map"
+    "main.b1cec025.css.map": "/teacherintarot/static/css/main.b1cec025.css.map",
+    "main.bd80ccd9.js.map": "/teacherintarot/static/js/main.bd80ccd9.js.map",
+    "453.43b78275.chunk.js.map": "/teacherintarot/static/js/453.43b78275.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.4b710023.js"
+    "static/css/main.b1cec025.css",
+    "static/js/main.bd80ccd9.js"
   ]
 }
