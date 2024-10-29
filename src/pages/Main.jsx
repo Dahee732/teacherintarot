@@ -106,6 +106,7 @@ const SubTitle = styled.p`
     color:var(--basic-yellow);
     /* margin-top:100px; */
     margin-bottom:19px;
+    font-size:22px;
 `
 const MainTitle = styled.h1`
     font-size:46px;
