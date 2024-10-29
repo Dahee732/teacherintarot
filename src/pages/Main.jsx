@@ -84,7 +84,7 @@ const Main = ()=> {
 
 const MainWrap = styled.div`
     padding-top:5rem;
-    max-width:480px;
+    max-width:390px;
     width:100%;
     height:100vh;
     /* background-color: #fff; */
@@ -108,7 +108,9 @@ const SubTitle = styled.p`
     margin-bottom:19px;
 `
 const MainTitle = styled.h1`
+    font-size:46px;
     color:var(--basic-white);
+    margin-bottom:15px;
 `
 const ScrollIcon = styled.div`
     position:absolute;
@@ -130,8 +132,8 @@ const TitleWrap = styled.div`
     background-repeat:no-repeat;
     background-size:contain;
     background-position:center;
-    width:355px;
-    height:355px;
+    width:370px;
+    height:370px;
     display:flex;
     justify-content: center;
     align-items: center;
