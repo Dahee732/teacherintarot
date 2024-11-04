@@ -1,33 +1,67 @@
-
-import react, { useState } from 'react'
-
+import  { useState } from 'react'
 import styled from "styled-components";
 import DatePicker from 'react-datepicker';
+import { useNavigate } from 'react-router-dom';
 import 'react-datepicker/dist/react-datepicker.css';
 import calendarIcon from '../assets/images/calendar.svg'
 
 const Submit = ( props ) => {
-
-
     const [selectedDate, setSelectedDate] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
-
-
-
+    const navigate = useNavigate();
     const handleIconClick = () => setIsOpen(!isOpen);
     const handleDateChange = (date) => {
         setSelectedDate(date);
         setIsOpen(false); // 날짜 선택 후 DatePicker 닫기
     };
     const checkResult = ()=> {
-        
         console.log(selectedDate)
         props.setIsResultOpen(true)
+        navigate(`/result/${calculateFinalNumber(selectedDate)}`)
+    }
+
+    const calculateFinalNumber = (birthdate) => {
+        // 초기 합계 계산
+
+        const yyyymmdd = birthdate.getFullYear() + 
+                String(birthdate.getMonth() + 1).padStart(2, '0') + 
+                String(birthdate.getDate()).padStart(2, '0');
+        let total = yyyymmdd
+            .split('')
+            .map(Number)
+            .reduce((sum, digit) => sum + digit, 0);
+        
+        // 규칙 적용
+        if (total < 22) {
+            return total;
+        } else if (total === 22) {
+            return 0;
+        } else {
+            // 22 초과인 경우, 각 자릿수를 다시 더함
+            while (total > 22) {
+                // 숫자를 문자열로 변환하여 각 자릿수를 분리하고 더함
+                total = String(total)
+                    .split('')
+                    .map(Number)
+                    .reduce((sum, digit) => sum + digit, 0);
+                
+                // 22인 경우 즉시 0 반환
+                if (total === 22) {
+                    return 0;
+                }
+            }
+            
+            return total;
+        }
     }
 
 
     return (
-        <InputWrap className="submit" isActive={props.isActive} isResultOpen = {props.isResultOpen}>
+        <InputWrap 
+            className="submit" 
+            $isActive={props.isActive} 
+            $isResultOpen={props.isResultOpen}
+        >
             <InputTit>
                 생년월일
             </InputTit>
@@ -45,7 +79,6 @@ const Submit = ( props ) => {
             <SubmitBtn onClick={checkResult}>
                 테스트 시작
             </SubmitBtn>
-
         </InputWrap>
     )
 }
@@ -54,10 +87,9 @@ const InputWrap = styled.div`
     width:100%;
     text-align: left;
     position:absolute;
-
     transition:all 1s ease;
-    opacity: ${props => props.isActive > 0 ? props.isResultOpen ? 0 : 1 : 0};
-    bottom:${props => props.isActive > 0 ? 50+"px" : -100+"%"};
+    opacity: ${props => props.$isActive > 0 ? props.$isResultOpen ? 0 : 1 : 0};
+    bottom:${props => props.$isActive > 0 ? 50+"px" : -100+"%"};
 `
 const InputTit = styled.div`
     font-size:15px;
@@ -88,7 +120,6 @@ const InputDate = styled.div`
     .react-datepicker-wrapper{
         width:100%;
         font-size:18px;
-
         color:var(--third-green)
     }
 
@@ -104,7 +135,6 @@ const InputDate = styled.div`
     .react-datepicker__input-container input:focus{
         outline:none;
     }
-
 `
 
 const SubmitBtn = styled.button`
@@ -127,6 +157,5 @@ const DateButton = styled.div`
     height:24px;
     background: url(${calendarIcon}) no-repeat center / contain;
 `
-
 
 export default Submit;

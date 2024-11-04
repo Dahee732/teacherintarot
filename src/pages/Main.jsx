@@ -7,7 +7,7 @@ import Submit from "../components/Submit"
 const Main = ()=> {
     const [pageNum, setPageNum] = useState(0);
     const [resultOpen, setResultOpen] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
+
 
 
     const handleWheel = (event)=> {
@@ -22,9 +22,6 @@ const Main = ()=> {
                 window.removeEventListener('wheel', handleWheel);
                 window.removeEventListener('touchmove', handleTouchMove);
               }
-
-
-      
     }
     const handleTouchMove = (event)=> {
 

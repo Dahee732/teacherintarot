@@ -760,3 +760,9 @@ const process = [
         ]
     }
 ]
+
+const findResultById = (id) => {
+    return process[id - 1]
+ };
+ 
+ export {process , findResultById };
