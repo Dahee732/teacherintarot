@@ -46,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter  basename="/teacherintarot">
       <GlobalStyle />
       <Routes>
         <Route path="/" element={<Main />} />
