@@ -1,18 +1,43 @@
 {
   "files": {
     "main.css": "/teacherintarot/static/css/main.b1cec025.css",
-    "main.js": "/teacherintarot/static/js/main.f9af2814.js",
+    "main.js": "/teacherintarot/static/js/main.390c6aad.js",
     "static/js/453.43b78275.chunk.js": "/teacherintarot/static/js/453.43b78275.chunk.js",
+    "static/media/card06.png": "/teacherintarot/static/media/card06.925ac214d0f3bdd325ed.png",
+    "static/media/card14.png": "/teacherintarot/static/media/card14.e536cc749bbb10d97db6.png",
+    "static/media/card04.png": "/teacherintarot/static/media/card04.909ba68981c49cf43e9b.png",
+    "static/media/card10.png": "/teacherintarot/static/media/card10.94d665b9925d7818e465.png",
+    "static/media/card21.png": "/teacherintarot/static/media/card21.6cb79ba334e92bd216c3.png",
+    "static/media/card20.png": "/teacherintarot/static/media/card20.6518cb3c80e3b7cec510.png",
+    "static/media/card19.png": "/teacherintarot/static/media/card19.ee03a7cdbfb03cb22969.png",
+    "static/media/card03.png": "/teacherintarot/static/media/card03.bd1727862fb67a2a0ef4.png",
+    "static/media/card11.png": "/teacherintarot/static/media/card11.3e2bfff98be3ef5b184a.png",
+    "static/media/card05.png": "/teacherintarot/static/media/card05.d2b3b68248b29ea64a24.png",
+    "static/media/card13.png": "/teacherintarot/static/media/card13.851afca445e40d228c8b.png",
+    "static/media/card12.png": "/teacherintarot/static/media/card12.fc21c4baeaeff363a4cd.png",
+    "static/media/card02.png": "/teacherintarot/static/media/card02.4ece0e679fe05029e45e.png",
+    "static/media/card17.png": "/teacherintarot/static/media/card17.0c20b9ee10328ed8402f.png",
+    "static/media/card07.png": "/teacherintarot/static/media/card07.f5d2c892da3cc76fc4c6.png",
+    "static/media/card18.png": "/teacherintarot/static/media/card18.2cf9b454628ea4e2ad60.png",
+    "static/media/card01.png": "/teacherintarot/static/media/card01.3025b9ba944c9dd796bc.png",
+    "static/media/card22.png": "/teacherintarot/static/media/card22.dbf9c4f4e31e42f36765.png",
+    "static/media/card15.png": "/teacherintarot/static/media/card15.bf75782283588e3af781.png",
+    "static/media/card08.png": "/teacherintarot/static/media/card08.7d99285cd78353bb4a6e.png",
+    "static/media/card16.png": "/teacherintarot/static/media/card16.7f5a3cc38a483ff5d080.png",
+    "static/media/card09.png": "/teacherintarot/static/media/card09.f809b89df3da19a60071.png",
+    "static/media/result_line.svg": "/teacherintarot/static/media/result_line.13370bc3b3c685081dcf4438e513a08f.svg",
     "static/media/main_bg.png": "/teacherintarot/static/media/main_bg.7d24b5bb4fa5830dcb61.png",
+    "static/media/result_bg.svg": "/teacherintarot/static/media/result_bg.bdcf5eb7034e8abc7da0472599d90f04.svg",
     "index.html": "/teacherintarot/index.html",
-    "static/media/calendar.svg": "/teacherintarot/static/media/calendar.e879f0cac16c405cd1262c628a3744fe.svg",
-    "static/media/scroll_down.svg": "/teacherintarot/static/media/scroll_down.87e243b78ee20d9b0e5f1c0782f376ef.svg",
+    "static/media/calendar.svg": "/teacherintarot/static/media/calendar.6df8cc017c8810354de91e62bb4b3804.svg",
+    "static/media/list_marker.svg": "/teacherintarot/static/media/list_marker.771f0f108cde69cb6518025a6ffc3fa8.svg",
+    "static/media/scroll_down.svg": "/teacherintarot/static/media/scroll_down.2373667dab44a8b9e4ffd66e469094e5.svg",
     "main.b1cec025.css.map": "/teacherintarot/static/css/main.b1cec025.css.map",
-    "main.f9af2814.js.map": "/teacherintarot/static/js/main.f9af2814.js.map",
+    "main.390c6aad.js.map": "/teacherintarot/static/js/main.390c6aad.js.map",
     "453.43b78275.chunk.js.map": "/teacherintarot/static/js/453.43b78275.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b1cec025.css",
-    "static/js/main.f9af2814.js"
+    "static/js/main.390c6aad.js"
   ]
 }
