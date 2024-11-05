@@ -17,7 +17,7 @@ const Submit = ( props ) => {
     const checkResult = ()=> {
         console.log(selectedDate)
         props.setIsResultOpen(true)
-        navigate(`/result/${calculateFinalNumber(selectedDate)}`)
+        navigate(`/result/${calculateFinalNumber(selectedDate) + 1}`)
     }
 
     const calculateFinalNumber = (birthdate) => {

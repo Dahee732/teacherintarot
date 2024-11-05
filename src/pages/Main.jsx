@@ -7,76 +7,87 @@ import Submit from "../components/Submit"
 const Main = ()=> {
     const [pageNum, setPageNum] = useState(0);
     const [resultOpen, setResultOpen] = useState(false);
-
-
+    const [touchStart, setTouchStart] = useState(null);
 
     const handleWheel = (event)=> {
-            if (event.deltaY < 0) {
-                console.log('up')
-                setPageNum(prop => prop !== 0 ? prop - 1 : 0);
-
-              } else if (event.deltaY > 0) {
-                console.log('down')
-                setPageNum(prop => prop + 1);
-
-                window.removeEventListener('wheel', handleWheel);
-                window.removeEventListener('touchmove', handleTouchMove);
-              }
-    }
-    const handleTouchMove = (event)=> {
-
         if (event.deltaY < 0) {
-
+            console.log('up')
             setPageNum(prop => prop !== 0 ? prop - 1 : 0);
-
-          } else if (event.deltaY > 0) {
-
+        } else if (event.deltaY > 0) {
+            console.log('down')
             setPageNum(prop => prop + 1);
-
             window.removeEventListener('wheel', handleWheel);
-            window.removeEventListener('touchmove', handleTouchMove);
-
-          }
-
+            window.removeEventListener('touchstart', handleTouchStart);
+            window.removeEventListener('touchend', handleTouchEnd);
+        }
     }
 
+    // 터치 시작점 저장
+    const handleTouchStart = (event) => {
+        setTouchStart(event.touches[0].clientY);
+    }
+
+    // 터치 종료 시 방향 계산
+    const handleTouchEnd = (event) => {
+        if (!touchStart) {
+            return;
+        }
+
+        const touchEnd = event.changedTouches[0].clientY;
+        const diff = touchStart - touchEnd;
+
+        // 위로 스와이프 (diff > 0)
+        if (diff > 50) { // 50은 최소 스와이프 거리
+            console.log('up swipe')
+            setPageNum(prop => prop + 1);
+            window.removeEventListener('wheel', handleWheel);
+            window.removeEventListener('touchstart', handleTouchStart);
+            window.removeEventListener('touchend', handleTouchEnd);
+        }
+        // 아래로 스와이프 (diff < 0)
+        else if (diff < -50) {
+            console.log('down swipe')
+            setPageNum(prop => prop !== 0 ? prop - 1 : 0);
+        }
+
+        setTouchStart(null);
+    }
 
     useEffect(() => {
         console.log("pageNum changed:", pageNum);
     },[pageNum])
 
-
     useEffect(()=> {
         window.addEventListener('wheel', handleWheel);
-        window.addEventListener('touchmove', handleTouchMove);
+        window.addEventListener('touchstart', handleTouchStart);
+        window.addEventListener('touchend', handleTouchEnd);
 
-    },[])
-
-
+        return () => {
+            window.removeEventListener('wheel', handleWheel);
+            window.removeEventListener('touchstart', handleTouchStart);
+            window.removeEventListener('touchend', handleTouchEnd);
+        }
+    },[touchStart]) // touchStart를 의존성 배열에 추가
 
     return (
         <MainWrap>
-                
-                <TitleWrap isResultOpen = {resultOpen}>
+            <TitleWrap isResultOpen = {resultOpen}>
                 <SubTitle>타로카드로 알아보는</SubTitle>
                 <MainTitle>교사 유형 테스트</MainTitle>
-                </TitleWrap>
+            </TitleWrap>
 
-                <ScrollIcon style={{opacity : pageNum === 0 ? 1 : 0}} >
-                    <img src={scrollIcon} alt="#" />
-                    scroll
-                </ScrollIcon>
+            <ScrollIcon style={{opacity : pageNum === 0 ? 1 : 0}} >
+                <img src={scrollIcon} alt="#" />
+                scroll
+            </ScrollIcon>
 
-                <Submit  
+            <Submit  
                 isActive = {pageNum} 
                 isResultOpen = {resultOpen} 
                 setIsResultOpen = {setResultOpen} 
-                />
-
-
+            />
         </MainWrap>
     )
-    
 }
 
 const MainWrap = styled.div`

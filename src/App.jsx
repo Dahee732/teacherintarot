@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Main from './pages/Main';
 import Result from './pages/Result';
 import { createGlobalStyle } from 'styled-components';
@@ -46,13 +46,13 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   return (
-    <BrowserRouter  basename="/teacherintarot">
+    <HashRouter>
       <GlobalStyle />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/result/:id" element={<Result />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
