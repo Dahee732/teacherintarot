@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/teacherintarot/static/css/main.b1cec025.css",
-    "main.js": "/teacherintarot/static/js/main.f98c809c.js",
+    "main.js": "/teacherintarot/static/js/main.c10e8e56.js",
     "static/js/453.43b78275.chunk.js": "/teacherintarot/static/js/453.43b78275.chunk.js",
     "static/media/card06.png": "/teacherintarot/static/media/card06.925ac214d0f3bdd325ed.png",
     "static/media/card14.png": "/teacherintarot/static/media/card14.e536cc749bbb10d97db6.png",
@@ -33,11 +33,11 @@
     "static/media/list_marker.svg": "/teacherintarot/static/media/list_marker.771f0f108cde69cb6518025a6ffc3fa8.svg",
     "static/media/scroll_down.svg": "/teacherintarot/static/media/scroll_down.2373667dab44a8b9e4ffd66e469094e5.svg",
     "main.b1cec025.css.map": "/teacherintarot/static/css/main.b1cec025.css.map",
-    "main.f98c809c.js.map": "/teacherintarot/static/js/main.f98c809c.js.map",
+    "main.c10e8e56.js.map": "/teacherintarot/static/js/main.c10e8e56.js.map",
     "453.43b78275.chunk.js.map": "/teacherintarot/static/js/453.43b78275.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b1cec025.css",
-    "static/js/main.f98c809c.js"
+    "static/js/main.c10e8e56.js"
   ]
 }
