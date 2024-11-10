@@ -91,7 +91,7 @@ const Submit = ( props ) => {
 }
 
 const InputWrap = styled.div`
-    width:100%;
+    width:90%;
     text-align: left;
     position:absolute;
     transition:all 1s ease;
@@ -152,6 +152,7 @@ const SubmitBtn = styled.button`
     border-radius:10px;
     border:none;
     color:var(--secondary-green);
+    font-family: 'Pretendard';
 `
 
 const DateButton = styled.div`

@@ -80,6 +80,12 @@ const Main = ()=> {
             </TitleWrap>
 
             <ScrollIcon style={{opacity : pageNum === 0 ? 1 : 0}} >
+                <p>타로메이저 카드의 원형(archetype) 이 <br />
+                    알려주는 당신의 교사 유형! 
+                    <br />
+                    <br />
+                    지금 알아보세요.
+                </p>
                 <img src={scrollIcon} alt="#" />
                 scroll
             </ScrollIcon>
@@ -127,6 +133,7 @@ const MainTitle = styled.h1`
 const ScrollIcon = styled.div`
     position:absolute;
     bottom:5%;
+    width:100%;
     text-align: center;
     display:flex;
     justify-content: center;
@@ -135,6 +142,13 @@ const ScrollIcon = styled.div`
     left:50%;
     transition:all 0.5s ease;
     transform: translateX(-50%);
+    p {
+        font-family: 'Pretendard';
+        font-weight:500;
+        width:100%;
+        margin-bottom:50px;
+        line-height:1.5;
+    }
     img{
         display:block;
     }

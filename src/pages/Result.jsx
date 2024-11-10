@@ -1,3 +1,4 @@
+import {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { findResultById } from '../data/data';
@@ -7,8 +8,10 @@ import resultList from '../assets/images/list_marker.svg'
 import resultLine from '../assets/images/result_line.svg'
 import { cardImages } from '../components/Cards';
 import Section from '../components/Section';
+import IsLoading from "../components/IsLoading";
 
 const Result = ()=>{
+    const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
     const { id } = useParams();
     const resultData = findResultById(id);
@@ -29,9 +32,19 @@ const Result = ()=>{
         {tit:`${title.korean} 타입 교사인 당신을 위한 행운 아이템`, key : resultData.item},
     ]
 
+    useEffect(()=>{
+        window.addEventListener('DOMContentLoaded', ()=>{
+            setIsLoading(false);
+        })
+    })
+    
+    useEffect(()=>{
+        console.log(isLoading)
+    },[isLoading])
 
     return (
         <ResultWrap>
+            {isLoading && <IsLoading />}
             <ResultEnTitle>{title.english}</ResultEnTitle>
             <ImgWrap>
                 <img src={cardImages[id < 10 ? ("0" + id) : id]} alt="#" />
@@ -63,7 +76,7 @@ const Result = ()=>{
 const ResultWrap = styled.div`
     font-family: 'Pretendard';
     color:var(--basic-white);
-    max-width:390px;
+    max-width:340px;
     margin:auto;
     padding-top:86px;
     height:100vh;
