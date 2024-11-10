@@ -2,7 +2,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import Main from './pages/Main';
 import Result from './pages/Result';
 import { createGlobalStyle } from 'styled-components';
-
+import IsLoading from './components/IsLoading';
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Noto+Sans+KR:wght@100..900&display=swap');
 
@@ -51,6 +51,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/result/:id" element={<Result />} />
+        <Route path="/Loading" element={<IsLoading />} />
+        
       </Routes>
     </HashRouter>
   );

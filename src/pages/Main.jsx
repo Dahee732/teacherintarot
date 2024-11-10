@@ -3,6 +3,9 @@ import scrollIcon from '../assets/images/scroll_down.svg';
 import mainBg from '../assets/images/main_bg.png';
 import React, {useState, useEffect} from 'react';
 import Submit from "../components/Submit"
+import TwinklingStars from "../components/TwinkleStars";
+
+
 
 const Main = ()=> {
     const [pageNum, setPageNum] = useState(0);
@@ -68,9 +71,9 @@ const Main = ()=> {
             window.removeEventListener('touchend', handleTouchEnd);
         }
     },[touchStart]) // touchStart를 의존성 배열에 추가
-
     return (
         <MainWrap>
+                        <TwinklingStars count={75} />
             <TitleWrap isResultOpen = {resultOpen}>
                 <SubTitle>타로카드로 알아보는</SubTitle>
                 <MainTitle>교사 유형 테스트</MainTitle>
@@ -137,7 +140,7 @@ const ScrollIcon = styled.div`
     }
 `
 const TitleWrap = styled.div`
-    background-image:url(${mainBg});
+    /* background-image:url(${mainBg}); */
     background-repeat:no-repeat;
     background-size:contain;
     background-position:center;

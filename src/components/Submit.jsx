@@ -4,20 +4,25 @@ import DatePicker from 'react-datepicker';
 import { useNavigate } from 'react-router-dom';
 import 'react-datepicker/dist/react-datepicker.css';
 import calendarIcon from '../assets/images/calendar.svg'
-
+import IsLoading from "../components/IsLoading";
 const Submit = ( props ) => {
     const [selectedDate, setSelectedDate] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useNavigate();
+    const [resultLoad, setResultLoad] = useState(false);
+
     const handleIconClick = () => setIsOpen(!isOpen);
     const handleDateChange = (date) => {
         setSelectedDate(date);
         setIsOpen(false); // 날짜 선택 후 DatePicker 닫기
     };
     const checkResult = ()=> {
-        console.log(selectedDate)
+        setResultLoad(true);
         props.setIsResultOpen(true)
-        navigate(`/result/${calculateFinalNumber(selectedDate) + 1}`)
+        setTimeout(()=> {
+            navigate(`/result/${calculateFinalNumber(selectedDate) + 1}`)
+        },500)
+        
     }
 
     const calculateFinalNumber = (birthdate) => {
@@ -76,6 +81,8 @@ const Submit = ( props ) => {
                 <DateButton onClick={handleIconClick} >
                 </DateButton>
             </InputDate>
+
+            {resultLoad && <IsLoading />}
             <SubmitBtn onClick={checkResult}>
                 테스트 시작
             </SubmitBtn>
