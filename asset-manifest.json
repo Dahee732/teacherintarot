@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/teacherintarot/static/css/main.b1cec025.css",
-    "main.js": "/teacherintarot/static/js/main.c80605a7.js",
+    "main.js": "/teacherintarot/static/js/main.f98c809c.js",
     "static/js/453.43b78275.chunk.js": "/teacherintarot/static/js/453.43b78275.chunk.js",
     "static/media/card06.png": "/teacherintarot/static/media/card06.925ac214d0f3bdd325ed.png",
     "static/media/card14.png": "/teacherintarot/static/media/card14.e536cc749bbb10d97db6.png",
@@ -25,19 +25,19 @@
     "static/media/card08.png": "/teacherintarot/static/media/card08.7d99285cd78353bb4a6e.png",
     "static/media/card16.png": "/teacherintarot/static/media/card16.7f5a3cc38a483ff5d080.png",
     "static/media/card09.png": "/teacherintarot/static/media/card09.f809b89df3da19a60071.png",
-    "static/media/result_line.svg": "/teacherintarot/static/media/result_line.1f6099d657dac4104d81e966bebf00b4.svg",
+    "static/media/result_line.svg": "/teacherintarot/static/media/result_line.13370bc3b3c685081dcf4438e513a08f.svg",
     "static/media/main_bg.png": "/teacherintarot/static/media/main_bg.7d24b5bb4fa5830dcb61.png",
-    "static/media/result_bg.svg": "/teacherintarot/static/media/result_bg.f27545ef0337f63ddeeff859ea68ef43.svg",
+    "static/media/result_bg.svg": "/teacherintarot/static/media/result_bg.bdcf5eb7034e8abc7da0472599d90f04.svg",
     "index.html": "/teacherintarot/index.html",
-    "static/media/calendar.svg": "/teacherintarot/static/media/calendar.e879f0cac16c405cd1262c628a3744fe.svg",
-    "static/media/list_marker.svg": "/teacherintarot/static/media/list_marker.4fd860c89d0e222c858ad960b3becaf1.svg",
-    "static/media/scroll_down.svg": "/teacherintarot/static/media/scroll_down.87e243b78ee20d9b0e5f1c0782f376ef.svg",
+    "static/media/calendar.svg": "/teacherintarot/static/media/calendar.6df8cc017c8810354de91e62bb4b3804.svg",
+    "static/media/list_marker.svg": "/teacherintarot/static/media/list_marker.771f0f108cde69cb6518025a6ffc3fa8.svg",
+    "static/media/scroll_down.svg": "/teacherintarot/static/media/scroll_down.2373667dab44a8b9e4ffd66e469094e5.svg",
     "main.b1cec025.css.map": "/teacherintarot/static/css/main.b1cec025.css.map",
-    "main.c80605a7.js.map": "/teacherintarot/static/js/main.c80605a7.js.map",
+    "main.f98c809c.js.map": "/teacherintarot/static/js/main.f98c809c.js.map",
     "453.43b78275.chunk.js.map": "/teacherintarot/static/js/453.43b78275.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b1cec025.css",
-    "static/js/main.c80605a7.js"
+    "static/js/main.f98c809c.js"
   ]
 }
