@@ -44,7 +44,7 @@ const Result = ()=>{
 
     return (
         <ResultWrap>
-            {isLoading && <IsLoading />}
+            
             <ResultEnTitle>{title.english}</ResultEnTitle>
             <ImgWrap>
                 <img src={cardImages[id < 10 ? ("0" + id) : id]} alt="#" />
@@ -67,6 +67,7 @@ const Result = ()=>{
             <ResetButton onClick={() => navigate('/')}>
                 다시 테스트하러 가기
             </ResetButton>
+            {isLoading && <IsLoading />}
         </ResultWrap>
 
     )

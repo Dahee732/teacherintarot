@@ -19,6 +19,7 @@ const LoadingWrap = styled.div`
     height:100vh;
     top:0;
     left:0;
+    z-index:10;
     background: linear-gradient(174.48deg, #2B6454 47.7%, #165342 67.69%);
 `
 
