@@ -44,7 +44,9 @@ const Result = ()=>{
 
     return (
         <ResultWrap>
-            
+                        <ResultLine style={{marginBottom:"20px"}}>
+                <img src={resultLine} alt="result_line" />
+            </ResultLine>
             <ResultEnTitle>{title.english}</ResultEnTitle>
             <ImgWrap>
                 <img src={cardImages[id < 10 ? ("0" + id) : id]} alt="#" />
