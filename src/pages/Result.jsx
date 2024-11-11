@@ -6,6 +6,7 @@ import styled from "styled-components";
 import resultBg from '../assets/images/result_bg.svg'
 import resultList from '../assets/images/list_marker.svg'
 import resultLine from '../assets/images/result_line.svg'
+import resultLine2 from '../assets/images/result_line2.svg'
 import { cardImages } from '../components/Cards';
 import Section from '../components/Section';
 import IsLoading from "../components/IsLoading";
@@ -44,8 +45,8 @@ const Result = ()=>{
 
     return (
         <ResultWrap>
-                        <ResultLine style={{marginBottom:"20px"}}>
-                <img src={resultLine} alt="result_line" />
+            <ResultLine style={{marginBottom:"20px"}}>
+                <img src={resultLine2} alt="result_line" />
             </ResultLine>
             <ResultEnTitle>{title.english}</ResultEnTitle>
             <ImgWrap>
@@ -81,7 +82,7 @@ const ResultWrap = styled.div`
     color:var(--basic-white);
     max-width:340px;
     margin:auto;
-    padding-top:86px;
+    padding-top:44px;
     height:100vh;
     overflow-y:scroll;
     &::-webkit-scrollbar{
@@ -122,12 +123,12 @@ const ImgWrap = styled.div`
     text-align: center;
     margin-bottom:39px;
     img{
-        width:50%;
-        max-width:181px;
+        width:60%;
+        max-width:183px;
     }
 `
 const ResultLine = styled.div`
-    width:90%;
+    width:94%;
     max-width:340px;
     margin:auto;
     margin-bottom:40px;
