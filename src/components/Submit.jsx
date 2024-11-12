@@ -68,7 +68,7 @@ const Submit = ( props ) => {
             $isResultOpen={props.isResultOpen}
         >
             <InputTit>
-                생년월일
+                생년월일(YYYYMMDD)
             </InputTit>
             <InputDate>
                 <DatePicker
