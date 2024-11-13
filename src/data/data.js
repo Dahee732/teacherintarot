@@ -729,7 +729,14 @@ const process = [
 ]
 
 const findResultById = (id) => {
-    return process[id - 1]
+    if(id == 22){
+        return(process[21])
+    }else if(id == 0){
+        return(process[21])
+    }else{
+        return process[id - 1]
+    }
+
  };
  
  export {process , findResultById };

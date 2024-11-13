@@ -16,7 +16,7 @@ const Result = ()=>{
     const navigate = useNavigate();
     const { id } = useParams();
     const resultData = findResultById(id);
-    
+    const number = Number(id) == 0 ? 22 : Number(id)
     const splitText = (text) => {
         const korean = text.split('(')[0];
         const english = text.match(/\((.*?)\)/)[1];
@@ -50,7 +50,7 @@ const Result = ()=>{
             </ResultLine>
             <ResultEnTitle>{title.english}</ResultEnTitle>
             <ImgWrap>
-                <img src={cardImages[id < 10 ? ("0" + id) : id]} alt="#" />
+                <img src={cardImages[number < 10 ? ("0" + number) : number]} alt="#" />
             </ImgWrap>
             <ResultKrTitle>당신은 {title.korean} 타입의 교사</ResultKrTitle>
             <ResultLine>

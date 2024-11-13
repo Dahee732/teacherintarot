@@ -20,7 +20,7 @@ const Submit = ( props ) => {
         setResultLoad(true);
         props.setIsResultOpen(true)
         setTimeout(()=> {
-            navigate(`/result/${calculateFinalNumber(selectedDate) + 1}`)
+            navigate(`/result/${calculateFinalNumber(selectedDate)}`)
         },500)
         
     }
@@ -43,17 +43,20 @@ const Submit = ( props ) => {
             return 0;
         } else {
             // 22 초과인 경우, 각 자릿수를 다시 더함
-            while (total > 22) {
-                // 숫자를 문자열로 변환하여 각 자릿수를 분리하고 더함
-                total = String(total)
-                    .split('')
-                    .map(Number)
-                    .reduce((sum, digit) => sum + digit, 0);
+            if(total > 22){
+                while (total >= 10) {
+                    // 숫자를 문자열로 변환하여 각 자릿수를 분리하고 더함
+                    total = String(total)
+                        .split('')
+                        .map(Number)
+                        .reduce((sum, digit) => sum + digit, 0);
+                    
+                    // 22인 경우 즉시 0 반환
                 
-                // 22인 경우 즉시 0 반환
-                if (total === 22) {
-                    return 0;
                 }
+            }
+            if (total === 22) {
+                return 0;
             }
             
             return total;
