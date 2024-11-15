@@ -43,8 +43,7 @@ const Submit = ( props ) => {
             return 0;
         } else {
             // 22 초과인 경우, 각 자릿수를 다시 더함
-            if(total > 22){
-                while (total >= 10) {
+                while (total >= 22) {
                     // 숫자를 문자열로 변환하여 각 자릿수를 분리하고 더함
                     total = String(total)
                         .split('')
@@ -54,7 +53,7 @@ const Submit = ( props ) => {
                     // 22인 경우 즉시 0 반환
                 
                 }
-            }
+            
             if (total === 22) {
                 return 0;
             }
